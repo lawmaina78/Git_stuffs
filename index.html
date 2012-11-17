@@ -1,12 +1,11 @@
 <!DOCTYPE html> 
 <html> 
 	<head> 
-	<title>New Claim</title> 
 
-	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.0a2/jquery.mobile-1.0a2.min.css" />
+	<link rel="stylesheet" href="css/jquery.mobile-1.0a2.min.css" />
 	<link rel="stylesheet" href="css/colors.css">
-  <script src="http://code.jquery.com/jquery-1.4.4.min.js"></script>
-  <script src="http://code.jquery.com/mobile/1.0a2/jquery.mobile-1.0a2.min.js"></script>
+  <script src="js/jquery-1.4.4.min.js"></script>
+  <script src="js/jquery.mobile-1.0a2.min.js"></script>
   
 	<script>	 
 	 // Global declarations - assignments made in $(document).ready() below
@@ -35,120 +34,110 @@
 </head> 
 <body> 
 
+
+<div data-role="page" id="home">
+         <header data-role="header">
+        	<h1>HIV/AIDS Data Colletion Tool</h1>
+        	<div data-role="navbar">
+			<ul>
+				<li><a href="#home" data-icon="home" data-theme="b">MAIN</a></li>
+				<li><a href="#page1" data-icon="star" data-theme="b" class="ui-btn-active">ENTRY FORM</a></li>
+				<li><a href="#datalist" data-icon="grid" data-theme="b">DATALIST</a></li>
+			</ul>
+			</div>
+    	 </header>
+	
+     <section data-role="content">
+ 
+         <div align="CENTER"><img id="banner" name="banner" src="img/banner.gif"/></div>
+         <!-- THE ELEMENTS FOR THE REST OF THE SPEAKERS -->
+     </section>
+     <footer data-role="footer"><h4>&copy; 2012</h4></footer>
+</div>
+
+
 <!-- Page starts here -->
 <div data-role="page" data-theme="b" id="page1">
 
-	<div data-role="header" id="hdrMain" name="hdrMain" data-nobackbtn="true">
-		<h1>New Claim</h1>
-	</div>
+
+         <header data-role="header">
+        	<h1>HIV/AIDS Data Tool</h1>
+        	<div data-role="navbar">
+			<ul>
+				<li><a href="#home" data-icon="home" data-theme="b">MAIN</a></li>
+				<li><a href="#page1" data-icon="star" data-theme="b" class="ui-btn-active">ENTRY FORM</a></li>
+				<li><a href="#datalist" data-icon="grid" data-theme="b">DATALIST</a></li>
+			</ul>
+			</div>
+    	 </header>
+		 
 
 	<div data-role="content" id="contentMain" name="contentMain">	
 	
 	<form id="form1">
 	
-	<div id="shipDiv" data-role="fieldcontain">
-		<label for="shipNo">Shipping number*</label>		
-		<input id="shipNo" name="shipNo_r" type="text" />
+	<div id="patientNameDiv" data-role="fieldcontain">
+		<label for="patientName">Patient Names*</label>		
+		<input id="patientName" name="patientName_r" type="text" />
 	</div>
 
-	<div id="fnameDiv" data-role="fieldcontain">
-		<label for="fname" id="fnameLabel" name="fnameLabel">First name*</label>		
-		<input id="fname" name="fname_r" type="text" />
+	<div id="ageDiv" data-role="fieldcontain">
+		<label for="age" id="ageLabel" name="ageLabel">Age*</label>		
+		<input id="age" name="age_r" type="text" />
 	</div>
 	
-  <div id="lnameDiv" data-role="fieldcontain">
-		<label for="lname">Last name*</label>		
-		<input id="lname" name="lname_r" type="text" />
-	</div>
-	
-  <div id="emailDiv" data-role="fieldcontain">
-		<label for="email">Email*</label>		
-		<input id="email" name="email_r" type="text" />
-	</div>
-	
-	<div id="phoneDiv" data-role="fieldcontain">
-		<label for="phone">Phone</label>		
-		<input id="phone" name="phone" type="text"/>
-	</div>
-	
+  <div id="genderDiv" data-role="fieldcontain">
+		<label for="gender">Gender*</label>				
+				      <select id="gender" name="gender_r" tabindex="2">
+                  <option value="">Please select Gender</option>
+    							<option value="Male">Male</option>
+    							<option value="Female">Female</option>
 
-  	<div id="streetDiv" data-role="fieldcontain">
-  		<label for="street">Street address*</label>		
-  		<input id="street" name="street_r" type="text" />
-  	</div>
-    <div id="cityDiv" data-role="fieldcontain">
-  		<label for="city">City*</label>		
-  		<input id="city" name="city_r" type="text" />
-  	</div>
-  	<div id="stateDiv" data-role="fieldcontain">
-  		<label id="stateLabel" for="state">State*</label>		
-      <select id="state" name="state_r" tabindex="2">
-                  <option value="ZZ">Please select a state</option>
-    							<option value="AL">Alabama</option>
-    							<option value="AK">Alaska</option>
-    							<option value="AZ">Arizona</option>
-    							<option value="AR">Arkansas</option>
-    							<option value="CA">California</option>
-    							<option value="CO">Colorado</option>
-    							<option value="CT">Connecticut</option>
-    							<option value="DE">Delaware</option>
-    							<option value="FL">Florida</option>
-    							<option value="GA">Georgia</option>
-    							<option value="HI">Hawaii</option>
-    							<option value="ID">Idaho</option>
-    							<option value="IL">Illinois</option>
-    							<option value="IN">Indiana</option>
-    							<option value="IA">Iowa</option>
-    							<option value="KS">Kansas</option>
-    							<option value="KY">Kentucky</option>
-    							<option value="LA">Louisiana</option>
-    							<option value="ME">Maine</option>
-    							<option value="MD">Maryland</option>
-    							<option value="MA">Massachusetts</option>
-    							<option value="MI">Michigan</option>
-    							<option value="MN">Minnesota</option>
-    							<option value="MS">Mississippi</option>
-    							<option value="MO">Missouri</option>
-    							<option value="MT">Montana</option>
-    							<option value="NE">Nebraska</option>
-    							<option value="NV">Nevada</option>
-    							<option value="NH">New Hampshire</option>
-    							<option value="NJ">New Jersey</option>
-    							<option value="NM">New Mexico</option>
-    							<option value="NY">New York</option>
-    							<option value="NC">North Carolina</option>
-    							<option value="ND">North Dakota</option>
-    							<option value="OH">Ohio</option>
-    							<option value="OK">Oklahoma</option>
-    							<option value="OR">Oregon</option>
-    							<option value="PA">Pennsylvania</option>
-    							<option value="RI">Rhode Island</option>
-    							<option value="SC">South Carolina</option>
-    							<option value="SD">South Dakota</option>
-    							<option value="TN">Tennessee</option>
-    							<option value="TX">Texas</option>
-    							<option value="UT">Utah</option>
-    							<option value="VT">Vermont</option>
-    							<option value="VA">Virginia</option>
-    							<option value="WA">Washington</option>
-    							<option value="WV">West Virginia</option>
-    							<option value="WI">Wisconsin</option>
-    							<option value="WY">Wyoming</option>
+    				</select>
+		
+		
+		
+	</div>
+	
+  <div id="facilityDiv" data-role="fieldcontain">
+		<label for="facility">Nearest Health facility*</label>		
+	
+		      <select id="facility" name="facility_r" tabindex="2">
+                  <option value="">Please Select Health facility</option>
+    							<option value="Kinondoni">Kinondoni</option>
+    							<option value="Ilala">Ilala</option>
+    							<option value="Temeke ">Temeke </option>
+    							<option value="Kibaha ">Kibaha </option>								
+    		
     		</select>
-    </div>
-    
-    <div id="zipDiv" data-role="fieldcontain">
-  		<label for="zip">Postal code*</label>		
-  		<input id="zip" name="zip_r" type="text"/>
-  	</div>
-    
-    <div id="whatDiv" data-role="fieldcontain">
-    	<label id="whatLabel" for="what">Please explain what happened*:</label>
-    	<textarea cols="40" rows="8" id="what" name="what_r"></textarea>
-    </div>
-  
+	</div>
+	<div id="arvDiv" data-role="fieldcontain">
+		<label for="arv">Currently on ARVs?*</label>		
+
+		      <select id="arv" name="arv_r" tabindex="2">
+                  <option value="">Please Select</option>
+    							<option value="Yes">Yes</option>
+    							<option value="No">No</option>							
+    		
+    		</select>
+	</div>
+	
+	
+  <div id="supportDiv" data-role="fieldcontain">
+		<label for="support">Nearest Health facility*</label>		
+	
+		      <select id="support" name="support_r" tabindex="2">
+                  <option value="">Support needed</option>
+    							<option value="Food">Food</option>
+    							<option value="Finance">Finance</option>
+
+    		</select>
+	</div>
+	
+
   	<div id="submitDiv" data-role="fieldcontain">    
   	 <input type="submit" value="Submit Claim" data-inline="true"/>
+	 <a href="#home" data-role="button" dat-rel="back" data-icon="back" data-inline="true">MAIN PAGE</a>
     </div>
     </form>
 	</div><!-- contentMain -->
@@ -162,20 +151,24 @@
 	
   <!-- contentTransition is displayed after the form is submitted until a response is received back. -->
 	<div data-role="content" id="contentTransition" name="contentTransition">	
-	 <div align="CENTER"><h4>Your claim has been sent. Please wait.</h4></div>
+	 <div align="CENTER"><h4>Your data has been sent to the server.</h4></div>
 	 <div align="CENTER"><img id="spin" name="spin" src="img/wait.gif"/></div>
+	 
+	  
 	</div>	<!-- contentTransition -->
 	
 	<!-- Although stored within page1 div tag, hdrConfirmation, contentConfirmation and ftrConfirmation represent a self contained 'confirmation page' -->
 	<div data-role="header"  id="hdrConfirmation" name="hdrConfirmation" data-nobackbtn="true">
-		<h1>Claim Created</h1>
+		
 	</div>
 	
 	<div data-role="content" id="contentConfirmation" name="contentConfirmation" align="center">	
-  	<p>A new claim has been created based on data you have submitted.</p> 
-    <p>Your confirmation number is: <span id="confirmation" name="confirmation"></span>  </p>
+  	<p>A new record has been created based on data you have submitted.</p> 
+    <p>: <span id="confirmation" name="confirmation"></span>  </p>
 	</div><!-- contentConfirmation -->	
   	
+	<a id="buttonBack" name="buttonBack" href="#home" data-role="button" >RETURN</a>
+	
 	<div data-role="footer" id="ftrConfirmation" name="ftrConfirmation"></div> 
 	
 	
@@ -210,6 +203,13 @@
       return false;      
     });
    
+   
+   	  $('#buttonBack').click(function() {
+      hideContentDialog();
+      showMain();
+      return false;      
+    });
+   
     
     $('#form1').submit(function() {
         var err = false;
@@ -223,7 +223,9 @@
           $(this).prev().removeClass(MISSING); 
         });
         
-        // Perform form validation
+        
+		/*
+		// Perform form validation
         inputMapVar.each(function(index){  
         if($(this).val()==null || $(this).val()==EMPTY){  
             $(this).prev().addClass(MISSING);            
@@ -239,7 +241,10 @@
           err = true;
         }
         
-        // If validation fails, show Dialog content
+        
+		*/		
+		
+		// If validation fails, show Dialog content
         if(err == true){            
           showContentDialog();
           return false;
@@ -247,11 +252,11 @@
         
         // If validation passes, show Transition content
         showContentTransition();
-        
+
         // Submit the form
-        $.post("/forms/requestProcessor.php", form1Var.serialize(), function(data){
-          confirmationVar.text(data);
-          hideContentTransition();
+        $.post("http://webtechnologies.co/cmsa/ajax/engine.php", form1Var.serialize(), function(data){
+         confirmationVar.text(data);
+		  hideContentTransition();
           showConfirmation();
         });        
         return false;      
@@ -275,6 +280,8 @@
    
    function showContentTransition(){
     contentTransitionVar.show();
+	//showConfirmation();
+
    }  
    
   function hideContentDialog(){
